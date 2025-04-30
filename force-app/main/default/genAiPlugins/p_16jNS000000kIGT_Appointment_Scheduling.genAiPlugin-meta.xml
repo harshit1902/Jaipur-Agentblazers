@@ -31,7 +31,7 @@
         <masterLabel>instruction_iftheuserd1</masterLabel>
     </genAiPluginInstructions>
     <genAiPluginInstructions>
-        <description>If the user requests to schedule an appointment, pass the value &apos;bhavya@gmail.com&apos; it to the &apos;Get Patient Data action&apos; and fetch the available slots for appointment, and ask the user to provide confirmation for the available time slot before booking the appointment.</description>
+        <description>If the user requests to schedule an appointment, fetch the value from the field &apos;User Email&apos; of the current messaging session, and pass it to the &apos;Get Patient Data action&apos; and fetch the available slots for appointment, and ask the user to provide confirmation for the available time slot before booking the appointment.</description>
         <developerName>instruction_iftheuserr2</developerName>
         <language>en_US</language>
         <masterLabel>instruction_iftheuserr2</masterLabel>

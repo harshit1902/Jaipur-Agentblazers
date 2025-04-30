@@ -10,7 +10,7 @@
         <functionName>Insurance_policy_answers_action</functionName>
     </genAiFunctions>
     <genAiPluginInstructions>
-        <description>For any action, check if the Email of the user is already available in the current &quot;Messaging Session&quot; in the field &apos;User Email&apos;. If not available or blank, pass the value &apos;bhavya@gmail.com&apos; as the value.</description>
+        <description>For any action, check if the Email of the user is already available in the current &quot;Messaging Session&quot; in the field &apos;User Email&apos;. If not available or blank, fetch the value from the field &apos;user email&apos; of the current messaging session.</description>
         <developerName>instruction_foranyacti0</developerName>
         <language>en_US</language>
         <masterLabel>instruction_foranyacti0</masterLabel>
@@ -22,7 +22,7 @@
         <masterLabel>instruction_ifthequery1</masterLabel>
     </genAiPluginInstructions>
     <genAiPluginInstructions>
-        <description>Once the email of patient is obtained, pass the value &apos;bhavya@gmail.com&apos; to the action &quot;Get Insurance Policies Action&quot; to obtain the status and type of the Insurance Policy.</description>
+        <description>Once the email of patient is obtained, pass that value to the action &quot;Get Insurance Policies Action&quot; to obtain the status and type of the Insurance Policy.</description>
         <developerName>instruction_oncetheema2</developerName>
         <language>en_US</language>
         <masterLabel>instruction_oncetheema2</masterLabel>

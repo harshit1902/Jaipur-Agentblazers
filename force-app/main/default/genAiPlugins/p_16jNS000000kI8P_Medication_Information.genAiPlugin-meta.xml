@@ -7,7 +7,7 @@
         <functionName>Get_Patient_Medication_Action</functionName>
     </genAiFunctions>
     <genAiPluginInstructions>
-        <description>Before starting with any action, populate the field &apos;user email&apos; from the current messaging session with value &apos;bhavya@gmail.com&apos;, and pass its value to the action &apos;Get Patient Medication Action&apos; in the variable &apos;PatientEmail&apos;</description>
+        <description>Before starting with any action, fetch the email address of the user from the field &apos;user email&apos; from the current messaging session, and pass its value to the action &apos;Get Patient Medication Action&apos; in the variable &apos;PatientEmail&apos;.</description>
         <developerName>instruction_beforestar0</developerName>
         <language>en_US</language>
         <masterLabel>instruction_beforestar0</masterLabel>
