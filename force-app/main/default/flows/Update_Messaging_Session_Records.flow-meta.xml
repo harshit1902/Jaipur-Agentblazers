@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_human_Agent_found</name>
+        <label>Set human agent found</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>isHumanAgentAvailable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Messaging_Session_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_human_agent_not_found</name>
+        <label>Set human agent not found</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>isHumanAgentAvailable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Messaging_Session_Records</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check if Human agent available or not.</description>
+        <name>Check_human_Agent_presence</name>
+        <label>Check human Agent presence</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Set_human_agent_not_found</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not found</defaultConnectorLabel>
+        <rules>
+            <name>Human_Agent_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User_presence.UserId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_human_Agent_found</targetReference>
+            </connector>
+            <label>Human Agent found</label>
+        </rules>
+    </decisions>
+    <description>This flow updates the current Messaging Session Record, adding the name of the Next Agent (where control needs to be transferred) to the custom field &apos;Next Requested Agent Name&apos;</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Messaging Session Records {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Messaging Session Records</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the details about presence of Human agent</description>
+        <name>Get_User_presence</name>
+        <label>Get User presence</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_human_Agent_presence</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>UserId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>005NS00000KmZjJYAV</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsCurrentState</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>UserServicePresence</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>This component updates the Messaging Session records, picking up the current Messaging Session ID, and then adds the name of next identified agent to control the transfer to.</description>
+        <name>Update_Messaging_Session_Records</name>
+        <label>Update Messaging Session Records</label>
+        <locationX>182</locationX>
+        <locationY>542</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>MessagingSessionID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Next_Requested_Agent_Name__c</field>
+            <value>
+                <elementReference>NextAgentName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>isHumanAgentAvailable__c</field>
+            <value>
+                <elementReference>isHumanAgentAvailable</elementReference>
+            </value>
+        </inputAssignments>
+        <object>MessagingSession</object>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_User_presence</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Check if human Agent available or not.</description>
+        <name>isHumanAgentAvailable</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>MessagingSessionID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NextAgentName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Variable to deliver &quot;Success&quot; Prompt</description>
+        <name>SuccessPrompt</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Success</stringValue>
+        </value>
+    </variables>
+</Flow>
