@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>soni.vs@gmail.com</email>
+    <name>Fallback_Messaging</name>
+    <queueMembers>
+        <users>
+            <user>anil_master_concierge@00dns00000ibt4n.ext</user>
+            <user>anilpilania@gmail.com.tdx</user>
+            <user>harshit_appointment_assistant@00dns00000ibt4n.ext</user>
+            <user>dev.harshit19@gmail.com.tdx</user>
+            <user>honeyagarwal1212@gmail.com.tdx</user>
+            <user>honey_insurance_insight_advisor@00dns00000ibt4n.ext</user>
+            <user>sumit_prescription_specialist@00dns00000ibt4n.ext</user>
+            <user>ssumit.tanwar@gmail.com.tdx</user>
+            <user>vishal_emergency_response_agent@00dns00000ibt4n.ext</user>
+            <user>soni.vs@gmail.com.tdx</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Medcare_Routing_Configuration</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>
