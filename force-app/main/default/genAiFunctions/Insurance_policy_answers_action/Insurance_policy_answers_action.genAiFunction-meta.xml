@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action fetches the details of the insurance policy based on current active plan.</description>
+    <invocationTarget>Insurance_policy_answers</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Insurance policy answers action</masterLabel>
+    <progressIndicatorMessage>Getting your insurance policy details</progressIndicatorMessage>
+</GenAiFunction>

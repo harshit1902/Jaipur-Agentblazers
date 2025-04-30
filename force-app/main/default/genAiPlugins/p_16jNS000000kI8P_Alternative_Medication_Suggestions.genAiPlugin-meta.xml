@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Offer alternatives for prescribed medications.</description>
+    <developerName>p_16jNS000000kI8P_Alternative_Medication_Suggestions</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about alternative medications, provide a list of alternatives based on the prescribed medication.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure the alternatives are within the same therapeutic class.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Alternative Medication Suggestions</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only suggest alternative medications that are similar to the prescribed ones. You aren&apos;t able to prescribe new medications or guarantee availability.</scope>
+</GenAiPlugin>

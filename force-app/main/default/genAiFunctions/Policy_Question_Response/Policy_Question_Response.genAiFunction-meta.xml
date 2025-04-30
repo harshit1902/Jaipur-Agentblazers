@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Knowledge Answers for Policy related questions</description>
+    <invocationTarget>Policy_Question_Response</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Policy Question Response</masterLabel>
+    <progressIndicatorMessage>Default</progressIndicatorMessage>
+</GenAiFunction>

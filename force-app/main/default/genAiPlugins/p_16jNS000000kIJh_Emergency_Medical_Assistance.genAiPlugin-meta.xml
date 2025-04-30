@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when a user needs immediate response to medical emergencies.</description>
+    <developerName>p_16jNS000000kIJh_Emergency_Medical_Assistance</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about a medical emergency, respond with immediate assistance instructions.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>As a first step, confirm the nature of the emergency and provide relevant guidance.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Emergency Medical Assistance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only respond to immediate medical emergencies and provide necessary instructions or guidance. You aren&apos;t able to handle non-emergency queries.</scope>
+</GenAiPlugin>

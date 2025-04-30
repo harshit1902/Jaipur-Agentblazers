@@ -1,0 +1,28 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "MedicationDetails" : {
+      "title" : "MedicationDetails",
+      "description" : "Medication Details ",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "PatientFound" : {
+      "title" : "PatientFound",
+      "description" : "Status to check if Patient exists or not.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

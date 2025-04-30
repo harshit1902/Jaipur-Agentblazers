@@ -1,0 +1,28 @@
+{
+  "required" : [ "Input:Query", "Input:RetrieverIdOrName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Query" : {
+      "title" : "Query",
+      "description" : "A string created by generative AI to be used in the knowledge article search.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:RetrieverIdOrName" : {
+      "title" : "RetrieverIdOrName",
+      "description" : "File_Hospital_Policies_and_Procedures_1Cx_t4n4d646d5c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "The retriever mode to use (Simple/Augmented). Determines whether to do query regeneration",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

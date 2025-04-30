@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Provide users with guidance on home remedies for common ailments and conditions. This topic includes answering questions and offering advice on various home treatments.</description>
+    <developerName>Home_Remedies_Guidance</developerName>
+    <genAiFunctions>
+        <functionName>Home_Remedies_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a user asks for a remedy, provide a commonly accepted home remedy for the ailment.</description>
+        <developerName>instruction_ifauserask0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifauserask0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Gather as much information as possible from the user by asking clarifying questions about their symptoms and condition.</description>
+        <developerName>instruction_gatherasmu1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_gatherasmu1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Suggest multiple home remedies if available, and explain the steps to follow for each remedy.</description>
+        <developerName>instruction_suggestmul2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_suggestmul2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When unsure about a remedy, suggest the user consult with a healthcare professional.</description>
+        <developerName>instruction_whenunsure3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenunsure3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Avoid giving advice on serious medical conditions and recommend professional consultation instead.</description>
+        <developerName>instruction_avoidgivin4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_avoidgivin4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Home Remedies Guidance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to provide information and guidance on home remedies for common ailments. Do not offer medical diagnoses or treatment plans. Direct users to consult with a healthcare professional for serious conditions.</scope>
+</GenAiPlugin>

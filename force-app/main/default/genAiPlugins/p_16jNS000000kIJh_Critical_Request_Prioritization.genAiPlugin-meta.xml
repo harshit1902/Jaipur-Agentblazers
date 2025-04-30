@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when user requests need to be prioritized based on urgency and criticality.</description>
+    <developerName>p_16jNS000000kIJh_Critical_Request_Prioritization</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about prioritizing requests, assess the urgency and criticality of each request.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the urgency is determined, prioritize the requests accordingly.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Critical Request Prioritization</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only prioritize user requests by assessing their urgency and criticality. You aren&apos;t able to handle routine requests.</scope>
+</GenAiPlugin>

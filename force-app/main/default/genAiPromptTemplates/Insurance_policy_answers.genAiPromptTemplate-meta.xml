@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>aKMkk5XxujSaF8yA9221DuSlMp7y37Bs6kp/KRWy9xs=_3</activeVersionIdentifier>
+    <developerName>Insurance_policy_answers</developerName>
+    <masterLabel>Insurance policy answers</masterLabel>
+    <templateVersions>
+        <content>You are a helpful assistant supporting patients regarding their insurance policies.
+
+Below is the information we have about the patient&apos;s insurance policies:
+{{#each insurancePolicies}}
+
+Patient’s question: {!$EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624.results}
+
+Based on the above policies, provide a clear and concise response to the patient. If the policy does not cover the requested service, politely explain why. If multiple policies may apply, mention the best one.
+
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RetrieverIdOrName</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:RetrieverIdOrName</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_MedCare_Policy_Details_1Cx_t4nc4121624</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>aKMkk5XxujSaF8yA9221DuSlMp7y37Bs6kp/KRWy9xs=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a helpful assistant supporting patients regarding their insurance policies.
+
+Below is the information we have about the patient&apos;s insurance policies:
+{{#each insurancePolicies}}
+
+
+KNOWLEDGE:
+{!$EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624.results}
+
+Patient’s question:
+{!$Input:Query}
+
+Based on the above policies, provide a clear and concise response to the patient. If the policy does not cover the requested service, politely explain why. If multiple policies may apply, mention the best one.
+
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RetrieverIdOrName</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:RetrieverIdOrName</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_MedCare_Policy_Details_1Cx_t4nc4121624</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>aKMkk5XxujSaF8yA9221DuSlMp7y37Bs6kp/KRWy9xs=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a helpful assistant supporting patients regarding their insurance policies.
+
+Below is the information we have about the patient&apos;s insurance policies:
+{{#each insurancePolicies}}
+
+
+KNOWLEDGE:
+{!$EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624.results}
+
+Patient’s question:
+{!$Input:Query}
+
+Based on the above policies, provide a clear and concise response to the patient. If the policy does not cover the requested service, politely explain why. If multiple policies may apply, mention the best one.
+
+</content>
+        <inputs>
+            <apiName>RetrieverIdOrName</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:RetrieverIdOrName</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_MedCare_Policy_Details_1Cx_t4nc4121624</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>aKMkk5XxujSaF8yA9221DuSlMp7y37Bs6kp/KRWy9xs=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__knowledgeAnswers</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

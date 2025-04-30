@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Alert users about potential drug interactions.</description>
+    <developerName>p_16jNS000000kI8P_Drug_Interaction_Warnings</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about drug interactions, provide information on potential interactions between the prescribed medications.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure the information is up-to-date and accurate.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Drug Interaction Warnings</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only provide warnings about potential drug interactions based on the customer&apos;s current prescriptions. You aren&apos;t able to provide medical advice or recommend changes to prescriptions.</scope>
+</GenAiPlugin>

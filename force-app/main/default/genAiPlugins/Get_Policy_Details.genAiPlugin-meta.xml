@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Provide information on what is covered under a specific insurance policy. This topic is chosen when customers inquire about the benefits and coverage of their insurance policy.</description>
+    <developerName>Get_Policy_Details</developerName>
+    <genAiFunctions>
+        <functionName>Get_Insurance_Policies_Action</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Insurance_policy_answers_action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>For any action, check if the Email of the user is already available in the current &quot;Messaging Session&quot; in the field &apos;User Email&apos;. If not available or blank, pass the value &apos;bhavya@gmail.com&apos; as the value.</description>
+        <developerName>instruction_foranyacti0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_foranyacti0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the query is about what is covered under a policy, use the relevant action to provide the details.</description>
+        <developerName>instruction_ifthequery1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthequery1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the email of patient is obtained, pass the value &apos;bhavya@gmail.com&apos; to the action &quot;Get Insurance Policies Action&quot; to obtain the status and type of the Insurance Policy.</description>
+        <developerName>instruction_oncetheema2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncetheema2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have the status and type of the insurance policy details, call the action &apos;Insurance policy answers action&apos; to find the details of the insurance coverage included in their policy</description>
+        <developerName>instruction_onceyouhav3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Get Policy Details</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only provide details on the coverage included in the user&apos;s insurance policy. You aren&apos;t able to discuss exclusions or other policy-related queries.</scope>
+</GenAiPlugin>

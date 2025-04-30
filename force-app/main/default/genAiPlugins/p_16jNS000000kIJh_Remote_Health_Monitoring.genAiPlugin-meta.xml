@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when users seek assistance with monitoring their health remotely using advanced technology.</description>
+    <developerName>p_16jNS000000kIJh_Remote_Health_Monitoring</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about remote health monitoring, guide the user through the setup process.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When a user asks for help with monitoring tools, provide detailed instructions on usage.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Remote Health Monitoring</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist users with setting up and using remote health monitoring tools. You aren&apos;t able to provide direct medical advice.</scope>
+</GenAiPlugin>

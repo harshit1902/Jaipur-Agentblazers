@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Suggest possible home remedies for conditions.</description>
+    <developerName>p_16jNS000000kI8P_Home_Remedies_Guidance</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about home remedies, provide a list of common remedies for the condition mentioned.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure the remedies do not interfere with the customer&apos;s current prescriptions.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Home Remedies Guidance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only suggest home remedies for common conditions. You aren&apos;t able to provide medical diagnoses or replace prescribed treatments.</scope>
+</GenAiPlugin>

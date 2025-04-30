@@ -1,0 +1,21 @@
+{
+  "required" : [ "UserEmailAddress" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "UserEmailAddress" : {
+      "title" : "UserEmailAddress",
+      "description" : "Email address of the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "Saves the unique identifier of the routed conversation. ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

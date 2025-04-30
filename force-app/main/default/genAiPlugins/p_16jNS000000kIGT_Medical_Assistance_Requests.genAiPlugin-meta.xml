@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Provide medical assistance as requested by users.</description>
+    <developerName>p_16jNS000000kIGT_Medical_Assistance_Requests</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the user asks about medical services, use EmployeeCopilot__AnswerQuestionsWithKnowledge.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Medical Assistance Requests</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist users with their medical assistance requests by answering questions about medical services and procedures. You aren&apos;t able to provide medical advice or diagnoses.</scope>
+</GenAiPlugin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Enable users to access their health records.</description>
+    <developerName>p_16jNS000000kIGT_Health_Record_Access</developerName>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the user requests access to their health records, use SvcCopilotTmpl__IdentifyCustomerByEmail to identify the user and provide access.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Health Record Access</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only provide users with access to their health records based on their requests. You aren&apos;t able to modify or delete any health records.</scope>
+</GenAiPlugin>

@@ -1,0 +1,21 @@
+{
+  "required" : [ "PatientEmail" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "PatientEmail" : {
+      "title" : "PatientEmail",
+      "description" : "Patient's Email ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "PatientPhone" : {
+      "title" : "PatientPhone",
+      "description" : "Patient's Phone number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

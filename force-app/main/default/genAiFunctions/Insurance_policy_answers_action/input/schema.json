@@ -1,0 +1,28 @@
+{
+  "required" : [ "Input:Query", "Input:RetrieverIdOrName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Query" : {
+      "title" : "Query",
+      "description" : "Query from the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:RetrieverIdOrName" : {
+      "title" : "RetrieverIdOrName",
+      "description" : "{!$EinsteinSearch:File_MedCare_Policy_Details_1Cx_t4nc4121624.results}",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
